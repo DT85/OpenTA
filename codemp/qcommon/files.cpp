@@ -1365,7 +1365,7 @@ long FS_FOpenFileRead( const char *filename, fileHandle_t *file, qboolean unique
 							    !FS_IsExt(filename, ".arena", l) &&
 							    !FS_IsExt(filename, ".menu", l) &&
 							    !FS_IsExt(filename, ".fcf", l) &&
-							    Q_stricmp(filename, "jampgamex86.dll") != 0 &&
+							    Q_stricmp(filename, "tampgamex86.dll") != 0 &&
 							    //Q_stricmp(filename, "vm/qagame.qvm") != 0 &&
 							    !strstr(filename, "levelshots"))
 							{
@@ -3361,7 +3361,7 @@ void FS_Startup( const char *gameName ) {
 		homePath = fs_basepath->string;
 	}
 	fs_homepath = Cvar_Get ("fs_homepath", homePath, CVAR_INIT|CVAR_PROTECTED, "(Read/Write) Location for user generated files" );
-	fs_gamedirvar = Cvar_Get ("fs_game", "", CVAR_INIT|CVAR_SYSTEMINFO, "Mod directory" );
+	fs_gamedirvar = Cvar_Get ("fs_game", "TA", CVAR_INIT|CVAR_SYSTEMINFO, "Mod directory" );
 
 	fs_dirbeforepak = Cvar_Get("fs_dirbeforepak", "0", CVAR_INIT|CVAR_PROTECTED, "Prioritize directories before paks if not pure" );
 
